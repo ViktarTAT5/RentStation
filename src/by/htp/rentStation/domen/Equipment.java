@@ -49,9 +49,13 @@ public abstract class Equipment implements CaunterEquipment{
 		this.price = price;
 	}
 	
-	public int count(int counter){
+	public int incrementCounter(int counter){
 		counter++;
 		return counter;
 	}
 
+	public int decreaseCounter(int counter){
+		counter--;
+		return counter;
+	}
 }

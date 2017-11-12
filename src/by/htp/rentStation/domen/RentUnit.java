@@ -13,11 +13,10 @@ public class RentUnit {
 		units = new ArrayList<CaunterEquipment>();
 	}
 
-
-	public boolean addEquipments(CaunterEquipment unit) {
-		if(unit != null){
-			countEquipment = unit.count(countEquipment);
-			if(countEquipment <= MAX_EQUIPMENT_COUNT){
+	public boolean add(CaunterEquipment unit) {
+		if (unit != null) {
+			countEquipment = unit.incrementCounter(countEquipment);
+			if (countEquipment <= MAX_EQUIPMENT_COUNT) {
 				units.add(unit);
 				return true;
 			} else {
@@ -27,8 +26,17 @@ public class RentUnit {
 		return false;
 	}
 	
+	public boolean remove(CaunterEquipment unit){
+		if (unit != null) {
+			System.out.println(countEquipment);
+			if(units.remove(unit)){
+				
+				countEquipment = unit.decreaseCounter(countEquipment);
+				System.out.println(countEquipment);
+				return true;
+			}
+		}
+		return false;
+	}
 
-	
-	
-	
 }

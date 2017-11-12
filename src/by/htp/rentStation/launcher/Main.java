@@ -20,12 +20,15 @@ public class Main {
 		
 		RentUnit ren = new RentUnit();
 		
-		Print.print("" + ren.addEquipments(eq1));
-		Print.print("" + ren.addEquipments(eq2));
-		Print.print("" + ren.addEquipments(eq3));
-		Print.print("" + ren.addEquipments(eq4));
-		Print.print("" + ren.addEquipments(h1));
-		Print.print("" + ren.addEquipments(h2));
+		Print.print("" + ren.add(eq1));
+		Print.print("" + ren.add(eq2));
+		Print.print("" + ren.add(eq3));
+		Print.print("" + ren.add(eq4));
+		Print.print("" + ren.add(h1));
+		Print.print("" + ren.add(h2));
+		
+		Print.print("" + ren.remove(h1));
+		Print.print("" + ren.remove(eq1));
 		
 	}
 }
