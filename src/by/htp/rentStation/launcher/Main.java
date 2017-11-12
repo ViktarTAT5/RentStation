@@ -30,5 +30,6 @@ public class Main {
 		Print.print("" + ren.remove(h1));
 		Print.print("" + ren.remove(eq1));
 		
+		
 	}
 }

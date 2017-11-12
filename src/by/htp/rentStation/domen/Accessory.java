@@ -1,6 +1,6 @@
 package by.htp.rentStation.domen;
 
-public abstract class Accessory implements CaunterEquipment {
+public abstract class Accessory extends Product implements CaunterEquipment {
 	private int equipmentId;
 	private String title;
 	private Category category;
