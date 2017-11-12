@@ -7,7 +7,7 @@ public class RentStation {
 	private List<Equipment> equipments;
 	private List<Accessory> accessories;
 
-	{
+	public RentStation(){
 		equipments = new ArrayList();
 		accessories = new ArrayList();
 	}

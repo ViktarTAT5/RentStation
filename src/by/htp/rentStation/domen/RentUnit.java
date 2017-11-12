@@ -1,37 +1,33 @@
 package by.htp.rentStation.domen;
 
+import java.util.ArrayList;
+import java.util.List;
+
 public class RentUnit {
-	private static final int EQUIPMENT_SIZE = 3;
+	private static final int MAX_EQUIPMENT_COUNT = 3;
+
 	
 	private Equipment[] equipments;
-	private  int countEquipment;
-	
-	
-	{
-		equipments = new Equipment[EQUIPMENT_SIZE];
-	}
+	private List<Accessory> accessories;
+	private int countEquipment;
 
+	public RentUnit() {
+		equipments = new Equipment[MAX_EQUIPMENT_COUNT];
+		accessories = new ArrayList();
+	}
 
 	public Equipment[] getEquipments() {
 		return equipments;
 	}
 
-
-	public void setEquipments(Equipment equipment, int index) {
-		equipments[index] = equipment;
+	public void addEquipments(Equipment equipment) {
+		equipments[countEquipment] = equipment;
+		countEquipment++;
 	}
-
-
-	public int getCountEquipment() {
-		return countEquipment;
+	
+	public void addAccessory(Accessory accessory) {
+		accessories.add(accessory);
 	}
-
-
-	public void setCountEquipment(int countEquipment) {
-		this.countEquipment = countEquipment;
-	}
-
 	
-	
-	
+
 }
