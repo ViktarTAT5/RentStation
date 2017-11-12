@@ -6,18 +6,18 @@ import java.util.List;
 public class RentUnit {
 	private static final int MAX_EQUIPMENT_COUNT = 3;
 
-	private List<Product> units;
+	private List<Unit> units;
 	private int countEquipment;
 
 	public RentUnit() {
 		units = new ArrayList<>();
 	}
 
-	public boolean add(CaunterEquipment unit) {
+	public boolean add(Unit unit) {
 		if (unit != null) {
 			countEquipment = unit.incrementCounter(countEquipment);
 			if (countEquipment <= MAX_EQUIPMENT_COUNT) {
-				units.add((Product)unit);
+				units.add(unit);
 				return true;
 			} else {
 				countEquipment--;
@@ -25,12 +25,11 @@ public class RentUnit {
 		}
 		return false;
 	}
-	
-	public boolean remove(CaunterEquipment unit){
+
+	public boolean remove(Unit unit) {
 		if (unit != null) {
 			System.out.println(countEquipment);
-			if(units.remove(unit)){
-				
+			if (units.remove(unit)) {
 				countEquipment = unit.decreaseCounter(countEquipment);
 				System.out.println(countEquipment);
 				return true;
@@ -39,10 +38,8 @@ public class RentUnit {
 		return false;
 	}
 
-	public List<Product> getUnits() {
+	public List<Unit> getUnits() {
 		return units;
 	}
-	
-	
 
 }

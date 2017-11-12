@@ -2,17 +2,17 @@ package by.htp.rentStation.domen;
 
 import java.math.BigDecimal;
 
-public abstract class Product {
+public abstract class Unit {
 	private int equipmentId;
 	private String title;
 	private Category category;
 	private BigDecimal price;
 
-	public Product() {
+	public Unit() {
 
 	}
 
-	public Product(int equipmentId, String title, Category category, BigDecimal price) {
+	public Unit(int equipmentId, String title, Category category, BigDecimal price) {
 		super();
 		this.equipmentId = equipmentId;
 		this.title = title;
@@ -36,6 +36,8 @@ public abstract class Product {
 		return price;
 	}
 	
-	
+	public abstract int incrementCounter(int counter);
+
+	public abstract int decreaseCounter(int counter);
 
 }

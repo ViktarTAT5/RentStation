@@ -4,20 +4,16 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class Catalog {
-	private List<Equipment> equipments;
-	private List<Accessory> accessories;
+	private List<Unit> units;
+	
 
 	public Catalog() {
-		equipments = new ArrayList<Equipment>();
-		accessories = new ArrayList<Accessory>();
+		units = new ArrayList<Unit>();
 	}
 	
-	public void add(Equipment equipment){
-		equipments.add(equipment);
+	public void add(Unit unit){
+		units.add(unit);
 	}
 	
-	public void add(Accessory accessory){
-		accessories.add(accessory);
-	}
 	
 }

@@ -2,7 +2,7 @@ package by.htp.rentStation.domen;
 
 import java.math.BigDecimal;
 
-public abstract class Accessory extends Product implements CaunterEquipment {
+public abstract class Accessory extends Unit {
 
 	public Accessory() {
 
