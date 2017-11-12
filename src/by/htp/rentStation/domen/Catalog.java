@@ -19,4 +19,5 @@ public class Catalog {
 	public void add(Accessory accessory){
 		accessories.add(accessory);
 	}
+	
 }

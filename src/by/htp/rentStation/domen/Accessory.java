@@ -1,6 +1,6 @@
 package by.htp.rentStation.domen;
 
-public abstract class Accessory {
+public abstract class Accessory implements CaunterEquipment {
 	private int equipmentId;
 	private String title;
 	private Category category;
@@ -47,6 +47,10 @@ public abstract class Accessory {
 
 	public void setPrice(double price) {
 		this.price = price;
+	}
+	
+	public int count(int counter){
+		return counter;
 	}
 
 }

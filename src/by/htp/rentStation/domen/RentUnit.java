@@ -6,35 +6,29 @@ import java.util.List;
 public class RentUnit {
 	private static final int MAX_EQUIPMENT_COUNT = 3;
 
-	
-	private Equipment[] equipments;
-	private List<Accessory> accessories;
+	private List<CaunterEquipment> units;
 	private int countEquipment;
 
 	public RentUnit() {
-		equipments = new Equipment[MAX_EQUIPMENT_COUNT];
-		accessories = new ArrayList<Accessory>();
+		units = new ArrayList<CaunterEquipment>();
 	}
 
-	public Equipment[] getEquipments() {
-		return equipments;
-	}
 
-	public void addEquipments(Equipment equipment) {
-		if(equipment != null){
-		equipments[countEquipment] = equipment;
-		countEquipment++;
+	public boolean addEquipments(CaunterEquipment unit) {
+		if(unit != null){
+			countEquipment = unit.count(countEquipment);
+			if(countEquipment <= MAX_EQUIPMENT_COUNT){
+				units.add(unit);
+				return true;
+			} else {
+				countEquipment--;
+			}
 		}
+		return false;
 	}
 	
-	public void addAccessory(Accessory accessory) {
-		if(accessory != null)
-		accessories.add(accessory);
-	}
 
-	public List<Accessory> getAccessories() {
-		return accessories;
-	}
+	
 	
 	
 }

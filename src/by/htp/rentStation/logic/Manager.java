@@ -9,7 +9,7 @@ public class Manager {
 		this.rentStation = rentStation;
 	}
 	
-	f
+	
 	
 	
 
