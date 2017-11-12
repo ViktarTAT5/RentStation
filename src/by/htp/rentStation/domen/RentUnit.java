@@ -13,7 +13,7 @@ public class RentUnit {
 
 	public RentUnit() {
 		equipments = new Equipment[MAX_EQUIPMENT_COUNT];
-		accessories = new ArrayList();
+		accessories = new ArrayList<Accessory>();
 	}
 
 	public Equipment[] getEquipments() {
@@ -21,13 +21,20 @@ public class RentUnit {
 	}
 
 	public void addEquipments(Equipment equipment) {
+		if(equipment != null){
 		equipments[countEquipment] = equipment;
 		countEquipment++;
+		}
 	}
 	
 	public void addAccessory(Accessory accessory) {
+		if(accessory != null)
 		accessories.add(accessory);
 	}
-	
 
+	public List<Accessory> getAccessories() {
+		return accessories;
+	}
+	
+	
 }

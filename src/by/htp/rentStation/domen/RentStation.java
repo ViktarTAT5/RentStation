@@ -4,28 +4,20 @@ import java.util.ArrayList;
 import java.util.List;
 
 public class RentStation {
-	private List<Equipment> equipments;
-	private List<Accessory> accessories;
+	private Catalog catalog;
+	private Catalog rentCatalog;
 
-	public RentStation(){
-		equipments = new ArrayList();
-		accessories = new ArrayList();
+	public RentStation() {
+		catalog = new Catalog();
+		rentCatalog = new Catalog();
 	}
 
-	public List<Equipment> getEquipments() {
-		return equipments;
+	public Catalog getCatalog() {
+		return catalog;
 	}
 
-	public void setEquipments(List<Equipment> equipments) {
-		this.equipments = equipments;
-	}
-
-	public List<Accessory> getAccessories() {
-		return accessories;
-	}
-
-	public void setAccessories(List<Accessory> accessories) {
-		this.accessories = accessories;
+	public Catalog getRentCatalog() {
+		return rentCatalog;
 	}
 
 }
