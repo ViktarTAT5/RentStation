@@ -2,6 +2,7 @@ package by.htp.rentStation.comand;
 
 import by.htp.rentStation.comand.impl.DefoultActionImpl;
 import by.htp.rentStation.comand.impl.RentUnitActionImpl;
+import by.htp.rentStation.comand.impl.ViewOrdersActionImpl;
 import by.htp.rentStation.domen.RentStation;
 
 public class CommandHendler {
@@ -13,16 +14,19 @@ public class CommandHendler {
 	}
 
 	public StationAction defineAction(int input) {
-		StationAction sa = new DefoultActionImpl();
+		StationAction action = new DefoultActionImpl();
 
 		switch (input) {
 		case 1:
 			// sa = new ViewCatalogActionImpl();
 			break;
 		case 2:
-			sa = new RentUnitActionImpl(station);
-
+			action = new RentUnitActionImpl(station);
+			break;
+		case 3:
+			action = new ViewOrdersActionImpl(station.getOrders());
+			break;
 		}
-		return sa;
+		return action;
 	}
 }

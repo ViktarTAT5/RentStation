@@ -13,7 +13,7 @@ import by.htp.rentStation.domen.RentStation;
 import by.htp.rentStation.domen.accessory.Helmet;
 import by.htp.rentStation.domen.equipment.Bike;
 import by.htp.rentStation.util.Menu;
-import by.htp.rentStation.util.Print;
+
 
 
 public class Main {
@@ -37,13 +37,16 @@ public class Main {
 		
 		RentStation station = new RentStation();
 		station.setCatalog(catalog);
-		
+			
 		Menu.printMenu();
 		CommandHendler hendler = new CommandHendler(station);
 		StationAction action = hendler.defineAction(Menu.readConsole());
 		action.performAction();
 		
-		
+		Menu.printMenu();
+		hendler = new CommandHendler(station);
+		action = hendler.defineAction(Menu.readConsole());
+		action.performAction();
 		
 	}
 }

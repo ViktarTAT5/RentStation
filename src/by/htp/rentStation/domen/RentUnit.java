@@ -41,7 +41,9 @@ public class RentUnit {
 	}
 
 	public List<Unit> getUnits() {
-		return units;
+		ArrayList<Unit> temp = (ArrayList<Unit>)units;
+		temp.trimToSize();
+		return temp;
 	}
 
 }

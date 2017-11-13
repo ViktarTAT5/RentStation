@@ -9,7 +9,6 @@ public class RentStation {
 	private Catalog catalog;
 	private Catalog rentCatalog;
 	private List<Order> orders;
-	
 
 	public RentStation() {
 		catalog = new Catalog();
@@ -29,6 +28,10 @@ public class RentStation {
 		return rentCatalog;
 	}
 
+	public List<Order> getOrders() {
+		return orders;
+	}
+
 	public Unit searchUnitById(int unitId) {
 		for (Unit i : catalog.getUnits()) {
 			if (i.getUnitId() == unitId) {
@@ -37,11 +40,9 @@ public class RentStation {
 		}
 		return null;
 	}
-	
-	public void addOrder(Order order){
+
+	public void addOrder(Order order) {
 		orders.add(order);
 	}
-	
-	
 
 }
