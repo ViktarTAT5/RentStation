@@ -8,7 +8,7 @@ public abstract class Equipment extends Unit {
 
 	}
 
-	public Equipment(int equipmentId, String title, Category category, BigDecimal price) {
+	public Equipment(int equipmentId, String title, Category category, String price) {
 		super(equipmentId, title, category, price);
 	}
 

@@ -7,8 +7,15 @@ import java.io.InputStreamReader;
 public class Menu {
 
 	public static void printMenu(){
-		System.out.println("1. viev catalog");
-		System.out.println("2. do smth");
+		Print.print("1. viev catalog");
+		Print.print("2. to rent");
+		Print.print("9. do smth");
+	}
+	
+	public static void printMenuOder(){
+		Print.print("Enter id unit");
+		Print.print("2. to rent");
+		Print.print("9. do smth");
 	}
 	
 	public static int readConsole() throws IOException{

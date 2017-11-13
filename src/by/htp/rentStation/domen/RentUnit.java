@@ -28,14 +28,16 @@ public class RentUnit {
 
 	public boolean remove(Unit unit) {
 		if (unit != null) {
-			System.out.println(countEquipment);
 			if (units.remove(unit)) {
 				countEquipment = unit.decreaseCounter(countEquipment);
-				System.out.println(countEquipment);
 				return true;
 			}
 		}
 		return false;
+	}
+
+	public int getCountEquipment() {
+		return countEquipment;
 	}
 
 	public List<Unit> getUnits() {

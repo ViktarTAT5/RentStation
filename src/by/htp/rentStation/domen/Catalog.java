@@ -14,6 +14,13 @@ public class Catalog {
 	public void add(Unit unit){
 		units.add(unit);
 	}
+
+	public List<Unit> getUnits() {
+		ArrayList<Unit> temp = (ArrayList<Unit>)units;
+		temp.trimToSize();
+		return temp;
+	}
+	
 	
 	
 }

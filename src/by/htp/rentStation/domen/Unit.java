@@ -3,7 +3,7 @@ package by.htp.rentStation.domen;
 import java.math.BigDecimal;
 
 public abstract class Unit {
-	private int equipmentId;
+	private int unitId;
 	private String title;
 	private Category category;
 	private BigDecimal price;
@@ -12,16 +12,16 @@ public abstract class Unit {
 
 	}
 
-	public Unit(int equipmentId, String title, Category category, BigDecimal price) {
+	public Unit(int equipmentId, String title, Category category, String price) {
 		super();
-		this.equipmentId = equipmentId;
+		this.unitId = equipmentId;
 		this.title = title;
 		this.category = category;
-		this.price = price;
+		this.price = new BigDecimal(price);
 	}
 
-	public int getEquipmentId() {
-		return equipmentId;
+	public int getUnitId() {
+		return unitId;
 	}
 
 	public String getTitle() {
@@ -39,5 +39,12 @@ public abstract class Unit {
 	public abstract int incrementCounter(int counter);
 
 	public abstract int decreaseCounter(int counter);
+
+	@Override
+	public String toString() {
+		return " Id=" + unitId + ", title=" + title + ", category=" + category + ", price=" + price;
+	}
+	
+	
 
 }

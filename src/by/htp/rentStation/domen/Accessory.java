@@ -1,6 +1,6 @@
 package by.htp.rentStation.domen;
 
-import java.math.BigDecimal;
+
 
 public abstract class Accessory extends Unit {
 
@@ -8,7 +8,7 @@ public abstract class Accessory extends Unit {
 
 	}
 
-	public Accessory(int equipmentId, String title, Category category, BigDecimal price) {
+	public Accessory(int equipmentId, String title, Category category, String price) {
 		super(equipmentId, title, category, price);
 	}
 

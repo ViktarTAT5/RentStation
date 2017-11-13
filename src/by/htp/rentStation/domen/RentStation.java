@@ -1,6 +1,5 @@
 package by.htp.rentStation.domen;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public class RentStation {
@@ -16,8 +15,21 @@ public class RentStation {
 		return catalog;
 	}
 
+	public void setCatalog(Catalog catalog) {
+		this.catalog = catalog;
+	}
+
 	public Catalog getRentCatalog() {
 		return rentCatalog;
+	}
+
+	public Unit searchUnitById(int unitId) {
+		for (Unit i : catalog.getUnits()) {
+			if (i.getUnitId() == unitId) {
+				return i;
+			}
+		}
+		return null;
 	}
 
 }
