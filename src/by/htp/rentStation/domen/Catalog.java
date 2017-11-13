@@ -21,6 +21,10 @@ public class Catalog {
 		return temp;
 	}
 	
+	public void remove(Unit unit){
+		units.remove(unit);
+	}
+	
 	
 	
 }

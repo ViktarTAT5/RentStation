@@ -9,13 +9,13 @@ public class Menu {
 	public static void printMenu(){
 		Print.print("1. viev catalog");
 		Print.print("2. to rent");
+		Print.print("3. viev orders");
 		Print.print("9. do smth");
 	}
 	
 	public static void printMenuOder(){
-		Print.print("Enter id unit");
-		Print.print("2. to rent");
-		Print.print("9. do smth");
+		Print.print("Enter id unit:");
+		Print.print(" OR 9 validate order");
 	}
 	
 	public static int readConsole() throws IOException{

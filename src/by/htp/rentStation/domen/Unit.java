@@ -35,7 +35,7 @@ public abstract class Unit {
 	public BigDecimal getPrice() {
 		return price;
 	}
-	
+
 	public abstract int incrementCounter(int counter);
 
 	public abstract int decreaseCounter(int counter);
@@ -44,7 +44,42 @@ public abstract class Unit {
 	public String toString() {
 		return " Id=" + unitId + ", title=" + title + ", category=" + category + ", price=" + price;
 	}
-	
-	
+
+	@Override
+	public int hashCode() {
+		final int prime = 31;
+		int result = 1;
+		result = prime * result + ((category == null) ? 0 : category.hashCode());
+		result = prime * result + ((price == null) ? 0 : price.hashCode());
+		result = prime * result + ((title == null) ? 0 : title.hashCode());
+		result = prime * result + unitId;
+		return result;
+	}
+
+	@Override
+	public boolean equals(Object obj) {
+		if (this == obj)
+			return true;
+		if (obj == null)
+			return false;
+		if (getClass() != obj.getClass())
+			return false;
+		Unit other = (Unit) obj;
+		if (category != other.category)
+			return false;
+		if (price == null) {
+			if (other.price != null)
+				return false;
+		} else if (!price.equals(other.price))
+			return false;
+		if (title == null) {
+			if (other.title != null)
+				return false;
+		} else if (!title.equals(other.title))
+			return false;
+		if (unitId != other.unitId)
+			return false;
+		return true;
+	}
 
 }

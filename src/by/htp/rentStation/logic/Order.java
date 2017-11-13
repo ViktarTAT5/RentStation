@@ -19,14 +19,14 @@ public class Order {
 		totalPrice = new BigDecimal(0);
 	}
 
-	public void addUnit(Unit unit) {
+	public boolean addUnit(Unit unit) {
 		if (unit != null) {
 			if (rentUnit.add(unit)) {
 				totalPrice = totalPrice.add(unit.getPrice());
-			} else {
-				// TODO
-			}
+				return true;
+			} 
 		}
+		return false;
 	}
 
 	public void takeOrder(int hour) {

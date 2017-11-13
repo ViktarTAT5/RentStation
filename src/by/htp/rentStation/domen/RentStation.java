@@ -1,14 +1,20 @@
 package by.htp.rentStation.domen;
 
+import java.util.ArrayList;
 import java.util.List;
+
+import by.htp.rentStation.logic.Order;
 
 public class RentStation {
 	private Catalog catalog;
 	private Catalog rentCatalog;
+	private List<Order> orders;
+	
 
 	public RentStation() {
 		catalog = new Catalog();
 		rentCatalog = new Catalog();
+		orders = new ArrayList<Order>();
 	}
 
 	public Catalog getCatalog() {
@@ -31,5 +37,11 @@ public class RentStation {
 		}
 		return null;
 	}
+	
+	public void addOrder(Order order){
+		orders.add(order);
+	}
+	
+	
 
 }
