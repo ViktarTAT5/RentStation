@@ -8,9 +8,10 @@ public class Menu {
 
 	public static void printMenu(){
 		Print.print("1. viev catalog");
-		Print.print("2. to rent");
-		Print.print("3. viev orders");
-		Print.print("9. do smth");
+		Print.print("2. viev catalog rent");
+		Print.print("3. to rent");
+		Print.print("4. viev orders");
+		Print.print("9. exit");
 	}
 	
 	public static void printMenuOder(){
@@ -18,9 +19,14 @@ public class Menu {
 		Print.print(" OR 9 validate order");
 	}
 	
-	public static int readConsole() throws IOException{
+	public static int readConsole() {
 		BufferedReader br = new BufferedReader(new InputStreamReader(System.in));
-		String temp = br.readLine();
+		String temp = "";
+		try {
+			temp = br.readLine();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
 		return convertInt(temp);
 	}
 	

@@ -1,7 +1,5 @@
 package by.htp.rentStation.comand.impl;
 
-import java.io.FileNotFoundException;
-import java.io.IOException;
 import java.util.Formatter;
 import java.util.List;
 
@@ -17,9 +15,10 @@ public class ViewOrdersActionImpl implements StationAction {
 	}
 
 	@Override
-	public void performAction() throws FileNotFoundException, IOException {
-		Formatter f = new Formatter();
+	public void performAction() {
+		Formatter f;
 		for (Order i : orders) {
+			f = new Formatter();
 			if (i != null) {
 
 				Print.print("-----------");

@@ -18,13 +18,14 @@ public class ReaderFile {
 		BufferedReader br = null;
 
 		try {
-			FileReader fr = new FileReader(file);
-			br = new BufferedReader(fr);
+			//FileReader fr = ;
+			br = new BufferedReader(new FileReader(file));
 			String line;
 
 			while ((line = br.readLine()) != null) {
 				lines.add(line);
 			}
+			System.out.println();
 			
 		} catch (IOException e) {
 			e.printStackTrace();

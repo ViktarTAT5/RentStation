@@ -15,4 +15,11 @@ public class Helmet extends Accessory {
 		super(equipmentId, title, category, price);
 	}
 
+	@Override
+	public String toString() {
+		return "Helmet " + super.toString();
+	}
+	
+	
+
 }

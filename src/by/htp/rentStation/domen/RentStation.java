@@ -44,6 +44,15 @@ public class RentStation {
 		}
 		return null;
 	}
+	
+	public Order searchOrderById(int orderId) {
+		for (Order order : orders) {
+			if (order.getOrderId() == orderId) {
+				return order;
+			}
+		}
+		return null;
+	}
 
 	public void addOrder(Order order) {
 		orders.add(order);

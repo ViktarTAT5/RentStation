@@ -20,7 +20,7 @@ public class FactoryRentUnit {
 	public static Unit createUnit(String line, String delimeter) {
 		Unit unit = null;
 		String[] mas = line.split(delimeter);
-
+		mas = trimLine(mas);
 		switch (mas[0]) {
 		case "Bike":
 			unit = new Bike(Integer.parseInt(mas[1]),mas[2], Category.SUMMER, mas[4]);
@@ -30,5 +30,12 @@ public class FactoryRentUnit {
 			break;
 		}
 		return unit;
+	}
+	
+	private static String[] trimLine(String[] mas){
+		for(int i = 0; i < mas.length; i++){
+			mas[i] = mas[i].trim();
+		}
+		return mas;
 	}
 }

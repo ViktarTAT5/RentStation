@@ -19,18 +19,19 @@ public class RentUnitActionImpl implements StationAction {
 	}
 
 	@Override
-	public void performAction() throws IOException {
+	public void performAction() {
 		Print.print("Enter id unit");
 		int unitId = Menu.readConsole();
 		Unit unit = station.searchUnitById(unitId);
 		moveUnit(unit);
-		do{
-		Menu.printMenuOder();
+		do {
+			Menu.printMenuOder();
 		} while ((unitId = Menu.readConsole()) != 9);
 		Print.print("Enter rental time");
 		int hour = Menu.readConsole();
 		order.takeOrder(hour);
 		station.addOrder(order);
+		Print.print("order id= " + order.getOrderId());
 	}
 
 	private void moveUnit(Unit unit) {

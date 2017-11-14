@@ -9,16 +9,25 @@ import java.util.GregorianCalendar;
 import by.htp.rentStation.domen.RentUnit;
 
 public class Order {
+	private static int orderCount;
 
+	private int orderId;
 	private RentUnit rentUnit;
 	private BigDecimal totalPriceHour;
+	private int timeRent;
 	private Calendar timeReturnRent;
 
 	public Order() {
 		rentUnit = new RentUnit();
 		totalPriceHour = new BigDecimal(0);
+		orderCount++;
+		orderId = orderCount;
 	}
-	
+
+	public int getOrderId() {
+		return orderId;
+	}
+
 	public RentUnit getRentUnit() {
 		return rentUnit;
 	}
@@ -42,6 +51,10 @@ public class Order {
 	public void setTimeReturnRent(Calendar timeReturnRent) {
 		this.timeReturnRent = timeReturnRent;
 	}
+	
+	public int getTimeRent() {
+		return timeRent;
+	}
 
 	public boolean addUnit(Unit unit) {
 		if (unit != null) {
@@ -54,7 +67,8 @@ public class Order {
 	}
 
 	public void takeOrder(int hour) {
-		if (hour > 0 ) { //
+		if (hour > 0) { //
+			timeRent = hour;
 			timeReturnRent = GregorianCalendar.getInstance();
 			timeReturnRent.add(Calendar.HOUR, hour);
 		}
