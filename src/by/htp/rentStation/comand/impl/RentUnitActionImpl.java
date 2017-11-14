@@ -1,7 +1,5 @@
 package by.htp.rentStation.comand.impl;
 
-import java.io.IOException;
-
 import by.htp.rentStation.comand.StationAction;
 import by.htp.rentStation.domen.RentStation;
 import by.htp.rentStation.domen.Unit;

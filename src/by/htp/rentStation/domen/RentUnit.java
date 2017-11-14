@@ -8,6 +8,7 @@ public class RentUnit {
 
 	private List<Unit> units;
 	private int countEquipment;
+	//TODO make class counter
 
 	public RentUnit() {
 		units = new ArrayList<>();
