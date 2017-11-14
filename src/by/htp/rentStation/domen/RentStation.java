@@ -27,6 +27,10 @@ public class RentStation {
 	public Catalog getRentCatalog() {
 		return rentCatalog;
 	}
+	
+	public void setRentCatalog(Catalog catalog) {
+		this.rentCatalog = catalog;
+	}
 
 	public List<Order> getOrders() {
 		return orders;

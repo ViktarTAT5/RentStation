@@ -1,0 +1,3 @@
+Bike, 115, orlik, Category.SUMMER, 3.5
+Bike, 116, orlik, Category.SUMMER, 3.5
+Helmet, 214, h1, Category.SUMMER, 2

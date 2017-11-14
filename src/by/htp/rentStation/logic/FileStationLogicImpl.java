@@ -9,20 +9,29 @@ import java.io.IOException;
 import java.util.List;
 
 import by.htp.rentStation.domen.Catalog;
-
+import by.htp.rentStation.util.ReaderFile;
 
 public class FileStationLogicImpl implements StationLogic {
 
-	private static final String FILE_PATH = "C:\\Users\\VIKTAR\\eclipse-workspace\\praktika\\resourses\\equipment.txt";
+	private String filePath; // = "C:\\Users\\VIKTAR\\eclipse-workspace\\RentStation\\resourses\\unit.txt";
 	private static final String DELIMETER = ",";
 
+	public FileStationLogicImpl(String filePath){
+		this.filePath = filePath;
+	}
+	
 	@Override
 	public Catalog readCatalog() {
-		
-		//TODO
-		return new Catalog();
-	}	
+		Catalog catalog = new Catalog();
+		List<String> lines = ReaderFile.readerList(filePath);
 
-	
+		for (String line : lines) {
+			if (line != null) {
+				catalog.add(FactoryRentUnit.createUnit(line, DELIMETER));
+			}
+		}
+
+		return catalog;
+	}
 
 }
