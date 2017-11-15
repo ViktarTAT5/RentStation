@@ -11,7 +11,8 @@ public class WriterFile {
 			try {
 				writer = new FileWriter(filePath, false);
 				for (String line : lines) {
-					writer.write(line);
+					writer.write(line + "\n");
+					//writer.append('/n');
 				}
 				writer.flush();
 			} catch (IOException ex) {

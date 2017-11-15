@@ -4,5 +4,7 @@ import by.htp.rentStation.domen.Catalog;
 
 public interface CatalogDAO {
 
-	Catalog readCatalog();
+	Catalog readCatalogUnit();
+	
+	Catalog readCatalogRentUnit();
 }
