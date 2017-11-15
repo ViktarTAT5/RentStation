@@ -13,15 +13,34 @@ import by.htp.rentStation.dao.FactoryRentUnit;
 import by.htp.rentStation.dao.FileCatalogDAOImpl;
 import by.htp.rentStation.dao.ReaderFile;
 import by.htp.rentStation.domen.Catalog;
+import by.htp.rentStation.domen.Unit;
 
 public class FileStationLogicImpl implements StationLogic {
-	private CatalogDAO dao = new FileCatalogDAOImpl();
-	
+	CatalogDAO dao;
+
+	public FileStationLogicImpl() {
+		dao = new FileCatalogDAOImpl();
+	}
+
 	@Override
-	public Catalog readCatalog() {
-		Catalog catalog = new Catalog();
-		
-		return catalog;
+	public void searchUnitById(int unitId) {
+		Catalog catalog = dao.readCatalogUnit();
+		Unit unit = null;
+		for (Unit i : catalog.getUnits()) {
+			if (i.getUnitId() == unitId) {
+				unit = i;
+				break;
+			}
+		}
+
+		if (unit != null) {
+			// order.addUnit(unit);
+			dao.writeUnitInCatalogRentUnit(unit);
+			catalog.remove(unit);
+			dao.writeCatalogUnit(catalog);
+			
+
+		}
 	}
 
 }

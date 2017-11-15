@@ -1,12 +1,9 @@
 package by.htp.rentStation.logic;
 
-
-
-import by.htp.rentStation.dao.FileCatalogDAOImpl;
-import by.htp.rentStation.domen.Catalog;
+import by.htp.rentStation.domen.Unit;
 
 public interface StationLogic {
 	
-	Catalog readCatalog();
+	void searchUnitById(int unitId);
 	
 }

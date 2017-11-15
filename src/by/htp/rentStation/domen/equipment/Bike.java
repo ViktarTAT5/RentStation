@@ -20,7 +20,7 @@ public class Bike extends Equipment {
 
 	@Override
 	public String toStringFile() {
-		return "Bike, " + getUnitId() + ", " + getTitle() + ", " + getCategory() + ", " + getPrice();
+		return "Bike, " + getUnitId() + ", " + getTitle() + ", Category." + getCategory() + ", " + getPrice();
 	}
 
 }

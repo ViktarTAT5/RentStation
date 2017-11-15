@@ -30,7 +30,7 @@ public class WriterFile {
 		FileWriter writer = null;
 		try {
 			writer = new FileWriter(filePath, true);
-			writer.write(line);
+			writer.write( "\n" + line);
 			writer.flush();
 		} catch (IOException ex) {
 			ex.printStackTrace();

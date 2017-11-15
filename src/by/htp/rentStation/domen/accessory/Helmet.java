@@ -20,7 +20,7 @@ public class Helmet extends Accessory {
 
 	@Override
 	public String toStringFile() {
-		return "Helmet, " + getUnitId() + ", " + getTitle() + ", " + getCategory() + ", " + getPrice();
+		return "Helmet, " + getUnitId() + ", " + getTitle() + ", Category." + getCategory() + ", " + getPrice();
 	}
 
 }
