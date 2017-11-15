@@ -44,6 +44,8 @@ public abstract class Unit {
 	public String toString() {
 		return " Id=" + unitId + ", title=" + title + ", category=" + category + ", price=" + price;
 	}
+	
+	public abstract String toStringFile();
 
 	@Override
 	public int hashCode() {

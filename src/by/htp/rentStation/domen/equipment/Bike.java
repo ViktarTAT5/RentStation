@@ -6,7 +6,7 @@ import by.htp.rentStation.domen.Equipment;
 public class Bike extends Equipment {
 
 	public Bike() {
-	
+
 	}
 
 	public Bike(int equipmentId, String title, Category category, String price) {
@@ -17,7 +17,10 @@ public class Bike extends Equipment {
 	public String toString() {
 		return "Bike " + super.toString();
 	}
-	
-	
-	
+
+	@Override
+	public String toStringFile() {
+		return "Bike, " + getUnitId() + ", " + getTitle() + ", " + getCategory() + ", " + getPrice() + "/n";
+	}
+
 }

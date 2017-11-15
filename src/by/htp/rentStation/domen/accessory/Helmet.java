@@ -20,6 +20,9 @@ public class Helmet extends Accessory {
 		return "Helmet " + super.toString();
 	}
 	
-	
+	@Override
+	public String toStringFile() {
+		return "Helmet, " + getUnitId() + ", " + getTitle() + ", " + getCategory() + ", " + getPrice() + "/n";
+	}
 
 }
