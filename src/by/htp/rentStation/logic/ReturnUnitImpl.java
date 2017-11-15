@@ -21,5 +21,7 @@ public class ReturnUnitImpl implements ReturnUnit {
 		return price;
 	}
 	
-	private void moveUnit(Unit unit) { 
+	private void moveUnit(Unit unit) {
+		
+	}
 }

@@ -11,6 +11,7 @@ import by.htp.rentStation.domen.Category;
 import by.htp.rentStation.domen.Equipment;
 import by.htp.rentStation.domen.RentStation;
 import by.htp.rentStation.domen.accessory.Helmet;
+import by.htp.rentStation.domen.dao.WriterFile;
 import by.htp.rentStation.domen.equipment.Bike;
 import by.htp.rentStation.util.Menu;
 
@@ -22,7 +23,12 @@ public class Main {
 		StartProgram start = new StartProgram();
 		RentStation station = start.start();
 		
-		work(station);	
+		work(station);
+		//TODO del ||
+        //         \/		
+//		String filePath = "C:\\Users\\VIKTAR\\eclipse-workspace\\RentStation\\source\\unit.txt";
+//		String st = "asdfa afafa afafa";
+//		WriterFile.write(filePath, st);
 		
 	}
 	

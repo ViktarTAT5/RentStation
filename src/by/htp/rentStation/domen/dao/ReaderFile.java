@@ -1,4 +1,4 @@
-package by.htp.rentStation.util;
+package by.htp.rentStation.domen.dao;
 
 import java.io.BufferedReader;
 import java.io.File;
