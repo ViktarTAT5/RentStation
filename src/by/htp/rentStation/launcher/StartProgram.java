@@ -14,11 +14,11 @@ public class StartProgram {
 		Catalog catalog;
 		RentStation station = new RentStation();
 		
-		logic = new FileStationLogicImpl(FILE_PATH);
+		//logic = new FileStationLogicImpl(FILE_PATH);
 		catalog = logic.readCatalog();
 		station.setCatalog(catalog);
 		
-		logic = new FileStationLogicImpl(FILE_RENT_PATH);
+		//logic = new FileStationLogicImpl(FILE_RENT_PATH);
 		catalog = logic.readCatalog();
 		station.setRentCatalog(catalog);
 		

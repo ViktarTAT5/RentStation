@@ -9,16 +9,17 @@ import by.htp.rentStation.domen.Catalog;
 import by.htp.rentStation.domen.Unit;
 import by.htp.rentStation.util.Print;
 
-public class ViewCatalogActionIpml implements StationAction {
-	private CatalogDAO dao;
+public class ViewCatalogRentActionImpl implements StationAction {
+
+private CatalogDAO dao;
 	
-	public ViewCatalogActionIpml(){
+	public ViewCatalogRentActionImpl(){
 		dao = new FileCatalogDAOImpl();
 	}
 	
 	@Override
 	public void performAction() {
-		Catalog catalog = dao.readCatalogUnit();
+		Catalog catalog = dao.readCatalogRentUnit();
 		List<Unit> units = catalog.getUnits();
 		Print.print("------");
 		for(Unit unit : units){

@@ -3,6 +3,7 @@ package by.htp.rentStation.comand;
 import by.htp.rentStation.comand.impl.DefoultActionImpl;
 import by.htp.rentStation.comand.impl.RentUnitActionImpl;
 import by.htp.rentStation.comand.impl.ViewCatalogActionIpml;
+import by.htp.rentStation.comand.impl.ViewCatalogRentActionImpl;
 import by.htp.rentStation.comand.impl.ViewOrdersActionImpl;
 import by.htp.rentStation.domen.RentStation;
 
@@ -19,10 +20,10 @@ public class CommandHendler {
 
 		switch (input) {
 		case 1:
-			action = new ViewCatalogActionIpml(station.getCatalog());
+			action = new ViewCatalogActionIpml();
 			break;
 		case 2:
-			action = new ViewCatalogActionIpml(station.getRentCatalog());
+			action = new ViewCatalogRentActionImpl();
 			break;	
 		case 3:
 			action = new RentUnitActionImpl(station);
