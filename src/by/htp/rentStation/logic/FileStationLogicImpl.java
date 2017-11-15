@@ -8,9 +8,9 @@ import java.io.FileReader;
 import java.io.IOException;
 import java.util.List;
 
+import by.htp.rentStation.dao.FactoryRentUnit;
+import by.htp.rentStation.dao.ReaderFile;
 import by.htp.rentStation.domen.Catalog;
-import by.htp.rentStation.domen.dao.FactoryRentUnit;
-import by.htp.rentStation.domen.dao.ReaderFile;
 
 public class FileStationLogicImpl implements StationLogic {
 

@@ -1,4 +1,4 @@
-package by.htp.rentStation.domen.dao;
+package by.htp.rentStation.dao;
 
 import java.io.FileWriter;
 import java.io.IOException;
@@ -6,13 +6,12 @@ import java.util.List;
 
 public class WriterFile {
 
-	public static void writeList(String filePath, List<String> lines) {
+	public static void writeCatalog(String filePath, List<String> lines) {
 		FileWriter writer = null;
 			try {
 				writer = new FileWriter(filePath, false);
 				for (String line : lines) {
 					writer.write(line + "\n");
-					//writer.append('/n');
 				}
 				writer.flush();
 			} catch (IOException ex) {
@@ -27,7 +26,7 @@ public class WriterFile {
 		}
 	
 
-	public static void write(String filePath, String line) {
+	public static void writeLine(String filePath, String line) {
 		FileWriter writer = null;
 		try {
 			writer = new FileWriter(filePath, true);

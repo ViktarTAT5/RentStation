@@ -1,4 +1,4 @@
-package by.htp.rentStation.domen.dao;
+package by.htp.rentStation.dao;
 
 
 import by.htp.rentStation.domen.Category;
