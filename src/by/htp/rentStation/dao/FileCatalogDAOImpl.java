@@ -2,8 +2,6 @@ package by.htp.rentStation.dao;
 
 import java.util.ArrayList;
 import java.util.List;
-
-import by.htp.rentStation.entity.Catalog;
 import by.htp.rentStation.entity.Unit;
 
 public class FileCatalogDAOImpl implements CatalogDAO {
