@@ -2,7 +2,7 @@ package by.htp.rentStation.entity;
 
 import java.math.BigDecimal;
 
-public abstract class Unit {
+public abstract class Unit {// TODO serializable, comparable
 	private int unitId;
 	private String title;
 	private Category category;
@@ -44,7 +44,7 @@ public abstract class Unit {
 	public String toString() {
 		return " Id=" + unitId + ", title=" + title + ", category=" + category + ", price=" + price;
 	}
-	
+
 	public abstract String toStringFile();
 
 	@Override

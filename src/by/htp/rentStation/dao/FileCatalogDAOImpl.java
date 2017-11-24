@@ -12,17 +12,17 @@ public class FileCatalogDAOImpl implements CatalogDAO {
 	private static final String DELIMETER = ",";
 
 	@Override
-	public Catalog readCatalogUnit() {
+	public List<Unit> readCatalogUnit() {
 		return readCatalog(FILE_PATH);
 	}
 
 	@Override
-	public Catalog readCatalogRentUnit() {
+	public List<Unit> readCatalogRentUnit() {
 		return readCatalog(FILE_RENT_PATH);
 	}
 
-	private Catalog readCatalog(String filePath) {
-		Catalog catalog = new Catalog();
+	private List<Unit> readCatalog(String filePath) {
+		List<Unit> catalog = new ArrayList<>();
 		List<String> lines = ReaderFile.readerList(filePath);
 
 		for (String line : lines) {
@@ -33,19 +33,19 @@ public class FileCatalogDAOImpl implements CatalogDAO {
 		return catalog;
 	}
 
-	public void writeCatalogUnit(Catalog catalog) {
+	public void writeCatalogUnit(List<Unit> catalog) {
 		writeCatalog(catalog, FILE_PATH);
 	}
 
-	public void writeCatalogRentUnit(Catalog catalog) {
+	public void writeCatalogRentUnit(List<Unit> catalog) {
 		writeCatalog(catalog, FILE_RENT_PATH);
 	}
 
-	private void writeCatalog(Catalog catalog, String filePath) {
+	private void writeCatalog(List<Unit> catalog, String filePath) {
 
 		List<String> lines = new ArrayList<String>();
 
-		for (Unit unit : catalog.getUnits()) {
+		for (Unit unit : catalog) {
 			if (unit != null) {
 				lines.add(unit.toStringFile());
 			}

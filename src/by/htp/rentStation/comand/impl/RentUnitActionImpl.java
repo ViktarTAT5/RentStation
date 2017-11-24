@@ -1,7 +1,7 @@
 package by.htp.rentStation.comand.impl;
 
 import by.htp.rentStation.comand.StationAction;
-import by.htp.rentStation.entity.RentStation;
+
 import by.htp.rentStation.entity.Unit;
 import by.htp.rentStation.logic.FileStationLogicImpl;
 import by.htp.rentStation.logic.Order;
@@ -9,11 +9,10 @@ import by.htp.rentStation.util.Menu;
 import by.htp.rentStation.util.Print;
 
 public class RentUnitActionImpl implements StationAction {
-	private RentStation station;
 	private Order order;
 
-	public RentUnitActionImpl(RentStation station) {
-		this.station = station;
+	public RentUnitActionImpl() {
+		
 		order = new Order();
 	}
 
@@ -24,7 +23,7 @@ public class RentUnitActionImpl implements StationAction {
 		FileStationLogicImpl logic = new FileStationLogicImpl();
 		
 		do{
-			logic.searchUnitById(unitId);
+			//logic.searchUnitById(unitId);
 			//order.addUnit(unit);
 			Menu.printMenuOder();
 		} while ((unitId = Menu.readConsole()) != 9);

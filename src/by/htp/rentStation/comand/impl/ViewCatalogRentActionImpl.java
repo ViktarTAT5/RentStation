@@ -19,10 +19,9 @@ private CatalogDAO dao;
 	
 	@Override
 	public void performAction() {
-		Catalog catalog = dao.readCatalogRentUnit();
-		List<Unit> units = catalog.getUnits();
+		List<Unit> catalog = dao.readCatalogRentUnit();
 		Print.print("------");
-		for(Unit unit : units){
+		for(Unit unit : catalog){
 			Print.print(unit);
 		}
 		Print.print("------");

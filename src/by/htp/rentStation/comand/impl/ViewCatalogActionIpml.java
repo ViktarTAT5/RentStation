@@ -18,8 +18,7 @@ public class ViewCatalogActionIpml implements StationAction {
 	
 	@Override
 	public void performAction() {
-		Catalog catalog = dao.readCatalogUnit();
-		List<Unit> units = catalog.getUnits();
+		List<Unit> units = dao.readCatalogUnit();
 		Print.print("------");
 		for(Unit unit : units){
 			Print.print(unit);

@@ -4,6 +4,6 @@ import by.htp.rentStation.entity.Unit;
 
 public interface StationLogic {
 	
-	void searchUnitById(int unitId);
+	void rentUnit(int unitId);
 	
 }

@@ -5,15 +5,10 @@ import by.htp.rentStation.comand.impl.RentUnitActionImpl;
 import by.htp.rentStation.comand.impl.ViewCatalogActionIpml;
 import by.htp.rentStation.comand.impl.ViewCatalogRentActionImpl;
 import by.htp.rentStation.comand.impl.ViewOrdersActionImpl;
-import by.htp.rentStation.entity.RentStation;
+
 
 public class CommandHendler {
-	private RentStation station;
-
-	public CommandHendler(RentStation station) {
-		super();
-		this.station = station;
-	}
+	
 
 	public StationAction defineAction(int input) {
 		StationAction action = new DefoultActionImpl();
@@ -26,10 +21,10 @@ public class CommandHendler {
 			action = new ViewCatalogRentActionImpl();
 			break;	
 		case 3:
-			action = new RentUnitActionImpl(station);
+			action = new RentUnitActionImpl();
 			break;
 		case 4:
-			action = new ViewOrdersActionImpl(station.getOrders());
+			//action = new ViewOrdersActionImpl();
 			break;
 		case 9:
 			System.exit(0);
