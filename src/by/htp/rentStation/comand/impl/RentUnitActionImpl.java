@@ -18,7 +18,7 @@ public class RentUnitActionImpl implements StationAction {
 			logic.rentUnit(unitId);
 			Menu.printMenuOder();
 		} while ((unitId = Menu.readConsole()) != 9);
-		Print.print("");
+		Print.print("Enter rental time");
 		Print.print(logic.takeOrder(Menu.readConsole()));
 	}
 }
