@@ -7,8 +7,13 @@ import by.htp.rentStation.entity.RentUnit;
 import by.htp.rentStation.entity.Unit;
 import static by.htp.rentStation.util.Constant.*;
 
+import java.util.Calendar;
+import java.util.GregorianCalendar;
+import java.util.List;
+
 public class OrderLogicImpl implements OrderLogic {
 	private Order order;
+	private UnitDAO udao = new UnitDAOImpl();
 
 	public void createOrder() {
 		order = new Order();
@@ -16,7 +21,6 @@ public class OrderLogicImpl implements OrderLogic {
 
 	@Override
 	public void rentUnit(int unitId) {
-		UnitDAO udao = new UnitDAOImpl();
 		Unit unit = udao.searchUnitById(unitId);
 		addUnitOrder(unit);
 		// udao.removeUnitCatalog(unit);
@@ -42,5 +46,20 @@ public class OrderLogicImpl implements OrderLogic {
 		return false;
 	}
 	
-	public void 
+	public String takeOrder(int hour) {
+		if (hour > 0) { //
+			order.setTimeRent(hour);
+			order.setTimeReturnRent(GregorianCalendar.getInstance());
+			order.getTimeReturnRent().add(Calendar.HOUR, hour);
+			shiftUnitsCatalog(order.getRentUnit().getUnits());
+		}
+		return "order id = " + order.getOrderId();
+	}
+
+	private void shiftUnitsCatalog(List<Unit> units) {
+		for(Unit unit : units){
+			udao.removeUnitCatalog(unit);
+		}
+		
+	}
 }

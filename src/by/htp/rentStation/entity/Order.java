@@ -28,10 +28,6 @@ public class Order {
 		return rentUnit;
 	}
 
-	public void setRentUnit(RentUnit rentUnit) {
-		this.rentUnit = rentUnit;
-	}
-
 	public BigDecimal getTotalPrice() {
 		return totalPriceHour;
 	}
@@ -52,22 +48,8 @@ public class Order {
 		return timeRent;
 	}
 
-	public boolean addUnit(Unit unit) {
-		if (unit != null) {
-			if (rentUnit.add(unit)) {
-				totalPriceHour = totalPriceHour.add(unit.getPrice());
-				return true;
-			}
-		}
-		return false;
+	public void setTimeRent(int timeRent) {
+		this.timeRent = timeRent;
 	}
-
-	public void takeOrder(int hour) {
-		if (hour > 0) { //
-			timeRent = hour;
-			timeReturnRent = GregorianCalendar.getInstance();
-			timeReturnRent.add(Calendar.HOUR, hour);
-		}
-	}
-
+	
 }
