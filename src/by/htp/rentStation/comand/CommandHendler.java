@@ -5,7 +5,7 @@ import by.htp.rentStation.comand.impl.RentUnitActionImpl;
 import by.htp.rentStation.comand.impl.ViewCatalogActionIpml;
 import by.htp.rentStation.comand.impl.ViewCatalogRentActionImpl;
 import by.htp.rentStation.comand.impl.ViewOrdersActionImpl;
-import by.htp.rentStation.domen.RentStation;
+import by.htp.rentStation.entity.RentStation;
 
 public class CommandHendler {
 	private RentStation station;

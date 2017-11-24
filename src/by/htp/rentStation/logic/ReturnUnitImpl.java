@@ -4,7 +4,7 @@ import java.math.BigDecimal;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
 
-import by.htp.rentStation.domen.Unit;
+import by.htp.rentStation.entity.Unit;
 
 public class ReturnUnitImpl implements ReturnUnit {
 	

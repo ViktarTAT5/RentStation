@@ -1,10 +1,10 @@
 package by.htp.rentStation.dao;
 
 
-import by.htp.rentStation.domen.Category;
-import by.htp.rentStation.domen.Unit;
-import by.htp.rentStation.domen.accessory.Helmet;
-import by.htp.rentStation.domen.equipment.Bike;
+import by.htp.rentStation.entity.Category;
+import by.htp.rentStation.entity.Unit;
+import by.htp.rentStation.entity.accessory.Helmet;
+import by.htp.rentStation.entity.equipment.Bike;
 
 public class FactoryRentUnit {
 //	public static RentUnit createRentUnit(String rentEquipmentParameters) {

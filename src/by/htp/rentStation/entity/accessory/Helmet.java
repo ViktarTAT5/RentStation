@@ -1,7 +1,7 @@
-package by.htp.rentStation.domen.accessory;
+package by.htp.rentStation.entity.accessory;
 
-import by.htp.rentStation.domen.Accessory;
-import by.htp.rentStation.domen.Category;
+import by.htp.rentStation.entity.Accessory;
+import by.htp.rentStation.entity.Category;
 
 public class Helmet extends Accessory {
 

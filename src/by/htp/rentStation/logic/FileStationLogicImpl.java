@@ -12,8 +12,8 @@ import by.htp.rentStation.dao.CatalogDAO;
 import by.htp.rentStation.dao.FactoryRentUnit;
 import by.htp.rentStation.dao.FileCatalogDAOImpl;
 import by.htp.rentStation.dao.ReaderFile;
-import by.htp.rentStation.domen.Catalog;
-import by.htp.rentStation.domen.Unit;
+import by.htp.rentStation.entity.Catalog;
+import by.htp.rentStation.entity.Unit;
 
 public class FileStationLogicImpl implements StationLogic {
 	CatalogDAO dao;

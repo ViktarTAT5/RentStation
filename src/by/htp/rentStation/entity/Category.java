@@ -1,4 +1,4 @@
-package by.htp.rentStation.domen;
+package by.htp.rentStation.entity;
 
 public enum Category {
 	WINTER, SUMMER

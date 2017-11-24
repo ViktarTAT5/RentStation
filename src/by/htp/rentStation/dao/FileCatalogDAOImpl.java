@@ -3,8 +3,8 @@ package by.htp.rentStation.dao;
 import java.util.ArrayList;
 import java.util.List;
 
-import by.htp.rentStation.domen.Catalog;
-import by.htp.rentStation.domen.Unit;
+import by.htp.rentStation.entity.Catalog;
+import by.htp.rentStation.entity.Unit;
 
 public class FileCatalogDAOImpl implements CatalogDAO {
 	private static final String FILE_PATH = "C:\\Users\\VIKTAR\\eclipse-workspace\\RentStation\\source\\unit.txt";

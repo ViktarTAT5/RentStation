@@ -2,7 +2,7 @@ package by.htp.rentStation.launcher;
 
 import by.htp.rentStation.comand.CommandHendler;
 import by.htp.rentStation.comand.StationAction;
-import by.htp.rentStation.domen.RentStation;
+import by.htp.rentStation.entity.RentStation;
 import by.htp.rentStation.util.Menu;
 
 public class Main {
