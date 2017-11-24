@@ -1,6 +1,7 @@
 package by.htp.rentStation.entity.accessory;
 
 import by.htp.rentStation.entity.Category;
+import by.htp.rentStation.entity.Unit;
 
 public class Helmet extends Accessory {
 
@@ -21,5 +22,4 @@ public class Helmet extends Accessory {
 	public String toStringFile() {
 		return "Helmet, " + getUnitId() + ", " + getTitle() + ", Category." + getCategory() + ", " + getPrice();
 	}
-
 }

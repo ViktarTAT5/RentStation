@@ -7,7 +7,7 @@ import java.util.List;
 import by.htp.rentStation.entity.Unit;
 
 public class UnitDAOImpl implements UnitDAO {
-	CatalogDAO dao = new FileCatalogDAOImpl();
+	CatalogDAO dao = new CatalogFileDAOImpl();
 	List<Unit> catalog = new ArrayList<>();
 
 	@Override

@@ -1,10 +1,9 @@
 package by.htp.rentStation.comand.impl;
 
 import by.htp.rentStation.comand.StationAction;
-
+import by.htp.rentStation.entity.Order;
 import by.htp.rentStation.entity.Unit;
-import by.htp.rentStation.logic.FileStationLogicImpl;
-import by.htp.rentStation.logic.Order;
+import by.htp.rentStation.logic.OrderLogicImpl;
 import by.htp.rentStation.util.Menu;
 import by.htp.rentStation.util.Print;
 
@@ -20,10 +19,10 @@ public class RentUnitActionImpl implements StationAction {
 	public void performAction() {
 		Print.print("Enter id unit");
 		int unitId = Menu.readConsole();
-		FileStationLogicImpl logic = new FileStationLogicImpl();
+		OrderLogicImpl logic = new OrderLogicImpl();
 		
 		do{
-			//logic.searchUnitById(unitId);
+			logic.rentUnit(unitId);
 			//order.addUnit(unit);
 			Menu.printMenuOder();
 		} while ((unitId = Menu.readConsole()) != 9);

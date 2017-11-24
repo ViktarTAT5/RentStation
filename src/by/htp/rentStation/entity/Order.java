@@ -1,11 +1,8 @@
-package by.htp.rentStation.logic;
+package by.htp.rentStation.entity;
 
 import java.math.BigDecimal;
 import java.util.Calendar;
 import java.util.GregorianCalendar;
-
-import by.htp.rentStation.entity.RentUnit;
-import by.htp.rentStation.entity.Unit;
 
 public class Order {
 	private static int orderCount;

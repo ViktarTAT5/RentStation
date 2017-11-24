@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.List;
 import by.htp.rentStation.entity.Unit;
 
-public class FileCatalogDAOImpl implements CatalogDAO {
+public class CatalogFileDAOImpl implements CatalogDAO {
 	private static final String FILE_PATH = "C:\\Users\\VIKTAR\\eclipse-workspace\\RentStation\\source\\unit.txt";
 	private static final String FILE_RENT_PATH = "C:\\Users\\VIKTAR\\eclipse-workspace\\RentStation\\source\\unitRent.txt";
 	private static final String DELIMETER = ",";

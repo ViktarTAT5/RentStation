@@ -4,7 +4,7 @@ import java.util.Formatter;
 import java.util.List;
 
 import by.htp.rentStation.comand.StationAction;
-import by.htp.rentStation.logic.Order;
+import by.htp.rentStation.entity.Order;
 import by.htp.rentStation.util.Print;
 
 public class ViewOrdersActionImpl implements StationAction {

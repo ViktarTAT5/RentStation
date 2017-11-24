@@ -2,7 +2,8 @@ package by.htp.rentStation.entity;
 
 import java.math.BigDecimal;
 
-public abstract class Unit {// TODO serializable, comparable
+public abstract class Unit implements Comparable<Unit> {// TODO serializable,
+														
 	private int unitId;
 	private String title;
 	private Category category;
@@ -82,6 +83,11 @@ public abstract class Unit {// TODO serializable, comparable
 		if (unitId != other.unitId)
 			return false;
 		return true;
+	}
+	
+	@Override
+	public int compareTo(Unit o) {
+		return this.unitId - o.unitId;
 	}
 
 }
