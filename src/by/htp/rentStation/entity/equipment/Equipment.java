@@ -1,4 +1,7 @@
-package by.htp.rentStation.entity;
+package by.htp.rentStation.entity.equipment;
+
+import by.htp.rentStation.entity.Category;
+import by.htp.rentStation.entity.Unit;
 
 public abstract class Equipment extends Unit {
 

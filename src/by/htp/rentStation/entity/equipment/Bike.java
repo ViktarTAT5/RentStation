@@ -1,7 +1,6 @@
 package by.htp.rentStation.entity.equipment;
 
 import by.htp.rentStation.entity.Category;
-import by.htp.rentStation.entity.Equipment;
 
 public class Bike extends Equipment {
 

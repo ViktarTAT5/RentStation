@@ -1,6 +1,5 @@
 package by.htp.rentStation.entity.accessory;
 
-import by.htp.rentStation.entity.Accessory;
 import by.htp.rentStation.entity.Category;
 
 public class Helmet extends Accessory {
